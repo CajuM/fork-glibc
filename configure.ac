@@ -434,6 +434,8 @@ fi
 case "$host_os" in
 linux*)
   ;;
+unikraft*)
+  ;;
 gnu*)
   host_os=`echo $host_os | sed -e 's/gnu/gnu-gnu/'`
   ;;
@@ -528,7 +530,7 @@ LIBC_PRECONFIGURE([$srcdir], [for sysdeps])
 ###
 if test -z "$enable_hacker_mode" && test x"$libc_config_ok" != xyes; then
   case "$machine-$host_os" in
-  *-linux* | *-gnu*)
+  *-linux* | *-gnu* | *-unikraft*)
     ;;
   *)
     AC_MSG_ERROR([
@@ -896,6 +898,8 @@ gnu*)
   base_os=mach/hurd ;;
 linux*)
   base_os=unix/sysv ;;
+unikraft*)
+  base_os=unikraft ;;
 esac
 
 # For sunos4.1.1, try sunos4.1.1, then sunos4.1, then sunos4, then sunos.

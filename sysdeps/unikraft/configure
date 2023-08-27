@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "#define __ABI_TAG_VERSION 0,14,0" >>confdefs.h
+echo "#define HAVE_INLINED_SYSCALLS 1" >>confdefs.h

@@ -28,5 +28,7 @@
 
 .*-.*-syllable.*	5	2.0.0	# just an arbitrary value
 
+.*-.*-unikraft.*	6	0.14.0	# we started porting at this version
+
 # There is no catch-all default here because every supported OS that uses
 # ELF must have its own unique ABI tag.
